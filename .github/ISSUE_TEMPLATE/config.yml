@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contribution and development guide
+    url: https://github.com/kang0225/alert-tune/blob/main/CONTRIBUTING.md
+    about: Read setup and contribution instructions. Use a blank issue for questions not covered by this guide.
+  - name: Report a security vulnerability privately
+    url: https://github.com/kang0225/alert-tune/blob/main/SECURITY.md
+    about: Follow the security policy instead of posting vulnerability details in a public issue.

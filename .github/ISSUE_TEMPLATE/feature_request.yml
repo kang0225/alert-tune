@@ -1,0 +1,38 @@
+name: Feature request
+description: Propose an improvement or discuss a new capability.
+title: "feat: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Search existing issues and check the roadmap in the README before proposing a feature.
+        alert-tune is in early development; some documented capabilities are still planned.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: Explain the problem you need to solve and who would benefit.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the behavior you would like. A small CLI input/output example is helpful.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Optional. Describe existing workarounds or other approaches you considered.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Optional. Include relevant examples or links, with sensitive data removed.
+    validations:
+      required: false

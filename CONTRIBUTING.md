@@ -37,7 +37,7 @@ Run the shared checks before submitting:
 make check
 ```
 
-This checks Go formatting with `gofmt -l .`, runs `go vet ./...` and `go test ./...`, builds `bin/alert-tune`, and smoke-tests that `version` and `--version` print the same nonempty version output. There are currently no Go test files; add tests alongside new behavior.
+This checks Go formatting with `gofmt`, excluding `.git/` and `.claude/worktrees/`, runs `go vet ./...` and `go test ./...`, builds `bin/alert-tune`, and smoke-tests that `version` and `--version` print the same single line containing a nonempty version. There are currently no Go test files; add tests alongside new behavior.
 
 To run the current CLI manually:
 

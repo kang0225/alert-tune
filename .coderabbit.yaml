@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: ko-KR
+tone_instructions: "Go 초보자가 이해할 수 있도록 문제의 원인과 실제 영향, 필요한 수정 이유를 간결하게 설명해 주세요."
+
+reviews:
+  profile: quiet
+  high_level_summary: false
+  sequence_diagrams: false
+  estimate_code_review_effort: false
+  in_progress_fortune: false
+  poem: false
+  enable_prompt_for_ai_agents: false
+  auto_approvals:
+    enabled: false
+  auto_review:
+    enabled: true
+    drafts: false
+  path_instructions:
+    - path: "**/*"
+      instructions: |
+        실제 버그, 보안 문제, 오류 처리 누락, 경계 조건을 우선 검토해 주세요.
+        문제를 지적할 때 재현 조건과 사용자에게 미치는 영향을 설명해 주세요.
+        현재 PR 범위에 필요한 변경을 제안하고, 취향에 따른 스타일 지적이나
+        아직 필요하지 않은 추상화와 기능 확장은 피해주세요.
+    - path: "**/*.go"
+      instructions: |
+        반환된 오류의 처리와 전파, 입력 검증, 리소스 해제에 집중해 주세요.
+        새 동작이나 버그 수정에는 의미 있는 성공·실패·경계 조건 테스트를 제안해 주세요.
+  finishing_touches:
+    docstrings:
+      enabled: false
+    unit_tests:
+      enabled: false
+    simplify:
+      enabled: false
+    autofix:
+      enabled: false
+    fix_ci:
+      enabled: false
+    resolve_merge_conflict:
+      enabled: false
+
+chat:
+  art: false
+
+issue_enrichment:
+  planning:
+    enabled: false

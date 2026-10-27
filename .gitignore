@@ -1,0 +1,40 @@
+# 바이너리
+/alert-tune
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 빌드 출력 (go build, goreleaser)
+bin/
+dist/
+
+# 테스트 바이너리, 커버리지
+*.test
+*.out
+coverage.html
+
+# Go 워크스페이스
+go.work
+go.work.sum
+
+# `alert-tune fetch`가 쓰는 로컬 메트릭 캐시 (예정된 기본 위치)
+.alert-tune/
+
+# Prometheus, PagerDuty 토큰 같은 비밀값
+.env
+.env.*
+!.env.example
+
+# Claude Code 로컬 파일
+.claude/settings.local.json
+.claude/worktrees/
+
+# 에디터, OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
